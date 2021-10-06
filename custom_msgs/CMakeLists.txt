@@ -25,10 +25,18 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(srv_files
   "srv/AddTwoInts.srv"
+  "srv/AddThreeInts.srv"
 )
+
+set(msg_files
+  "msg/Num.msg"
+  "msg/SomeData.msg"
+)
+
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${srv_files}
+  ${msg_files}
 )
 
 ament_export_dependencies(rosidl_default_runtime)
